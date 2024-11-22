@@ -18,7 +18,7 @@ body {
 
 body {
   color: var(--foreground);
-  background: #e2d9e7;
+  background: #f0ecf1;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,19 +40,33 @@ a {
     color-scheme: dark;
   }
 }
-fieldset{
-border: 1px solid rgb(17, 12, 12);
-    border-radius: 5px;
-    padding: 10px;
-    margin-bottom: 20px;
-    background-color: rgb(233, 224, 224);
-    background-color: white;
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+fieldset {
+  border: 1px solid rgb(17, 12, 12);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 15px auto;
+  background-color: white;
+  max-width: 800px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Responsive adjustments for tablets and smaller devices */
+@media (max-width: 768px) {
+  fieldset {
+      max-width: 90%; /* Adjust width to fit smaller screens */
+      padding: 15px; /* Reduce padding */
+  }
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 480px) {
+  fieldset {
+      max-width: 95%; /* Further reduce width */
+      padding: 10px; /* Reduce padding even more */
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Soften the shadow */
+  }
+}
+
 #name {
   text-align: center;
   color:rgb(103, 103, 255);
@@ -165,4 +179,48 @@ input[type="date"] {
 }
 #fieldset0 {
  background-color: #dedcdf;
+}
+
+/* Set the body background */
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, #f0f0f0, #d9d9d9); /* Example background */
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Footer styles */
+footer {
+  background: inherit; /* Inherits the body's background */
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Links inside the footer */
+footer a {
+  color: #007BFF;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Footer Adjustments */
+@media (max-width: 768px) {
+  footer {
+      padding: 15px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+      padding: 10px;
+      font-size: 12px;
+  }
 }
